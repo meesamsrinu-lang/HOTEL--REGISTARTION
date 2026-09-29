@@ -1,0 +1,241 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Hotel_Registration.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+    <title>Hotel Registration</title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+<style>
+
+    * {
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+
+    body {
+
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background:#f4f6ff;
+
+    }
+
+
+    .main-container {
+
+        min-height:100vh;
+        background:
+        linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        ),
+        url('Images/hotel.jpg');
+
+        background-size:cover;
+        background-position:center;
+        padding-bottom:30px;
+
+    }
+
+
+    .header {
+
+        background:linear-gradient(135deg,#4e54c8,#8f94fb);
+        color:blue;
+        text-align:center;
+        padding:25px;
+        font-size:35px;
+        font-weight:bold;
+        letter-spacing:1px;
+
+        box-shadow:0 5px 15px rgba(0,0,0,0.3);
+
+    }
+
+
+    nav {
+
+        background:white;
+        display:flex;
+        justify-content:center;
+        gap:15px;
+        padding:15px;
+
+        box-shadow:0 5px 15px rgba(0,0,0,0.15);
+
+    }
+
+
+    nav a {
+
+        text-decoration:none;
+        color:#4e54c8;
+        font-size:16px;
+        font-weight:600;
+
+        padding:10px 18px;
+        border-radius:8px;
+
+        transition:.3s;
+
+    }
+
+
+    nav a:hover {
+
+        background:#4e54c8;
+        color:white;
+
+    }
+
+
+    .content-area {
+
+        width:90%;
+        margin:40px auto;
+
+        background:rgba(255,255,255,0.95);
+
+        border-radius:18px;
+
+        padding:30px;
+
+        box-shadow:
+        0 15px 35px rgba(0,0,0,0.2);
+
+    }
+
+
+    footer {
+
+        background:#333;
+        color:white;
+
+        text-align:center;
+
+        padding:15px;
+
+        font-size:16px;
+
+        margin-top:40px;
+
+    }
+
+
+
+    @media(max-width:700px){
+
+        nav {
+
+            flex-direction:column;
+            text-align:center;
+
+        }
+
+
+        .header {
+
+            font-size:25px;
+
+        }
+
+
+        .content-area {
+
+            width:95%;
+
+        }
+
+    }
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+<form id="form1" runat="server">
+
+
+<div class="main-container">
+
+
+    <div class="header">
+
+        🏨 Hotel Registration System
+
+    </div>
+
+
+
+    <nav>
+
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+
+
+        <asp:HyperLink ID="HyperLink1" 
+            runat="server"
+            NavigateUrl="~/WebForm2.aspx"
+            Text="User Registration" />
+
+
+        <asp:HyperLink ID="HyperLink2"
+            runat="server"
+            NavigateUrl="~/WebForm5.aspx"
+            Text="User Details" />
+
+
+        <asp:HyperLink ID="HyperLink3"
+            runat="server"
+            NavigateUrl="~/WebForm6.aspx"
+            Text="Hotel Registration" />
+
+
+        <asp:HyperLink ID="HyperLink4"
+            runat="server"
+            NavigateUrl="~/WebForm7.aspx"
+            Text="Hotel Details" />
+
+
+    </nav>
+
+
+
+    <div class="content-area">
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+
+        </asp:ContentPlaceHolder>
+
+
+    </div>
+
+
+
+    <footer>
+
+        NareshIT Project | Hotel Registration System
+
+    </footer>
+
+
+
+</div>
+
+
+</form>
+
+</body>
+
+</html>
